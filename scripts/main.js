@@ -1,14 +1,24 @@
-
+const $buttons = document.querySelectorAll("button");
 const $numbers = document.querySelectorAll(".number");
-console.log($numbers);
+const $operator = document.querySelectorAll(".operator");
 
-// $numbers.addEventListener = ('click', function(){
-//     console.log('You clicked the number.');
-// });
+// console.log($numbers);
+
+//  function pushNumber() {
+//     let message = ($numbers);
+//     alert(message);
+//  };
+
+ button.addEventListener = function(){
+    alert("?");
+};
 
 
- function pushNumber() {
-    let message = ($numbers);
-    alert(message);
- };
- pushNumber();
+// function pushNumber() {
+//     $numbers.click();
+// };
+
+// array.values($numbers);
+// console.dir($numbers);
+
+//attach event listener to dom node NOT DOM LIST
