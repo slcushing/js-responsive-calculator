@@ -34,10 +34,10 @@ The goal is to create a working calculator, identical in functionality to Calcul
 * Define a variable `calculation` pointing to an empty array
 * Using `Array.prototype.push`, perform actions on the `calculation` variable when numbers and operators are pressed
 * Using a `for` loop, `alert()` the calculation when `=` is pressed
+* Make the numbers and calculations appear on the calculator display
 
 # Hey, Mikey, I Think He Likes It Mode
 
-* Make the numbers and calculations appear on the calculator display
 * Add the following functions to your calculator:
     * A button to flip between positive and negative
     * A decimal point (Hint: you can add a decimal point to a String, then change the String into a Number)
