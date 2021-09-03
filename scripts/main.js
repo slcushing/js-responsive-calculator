@@ -1,6 +1,10 @@
 const $buttons = document.querySelectorAll("button");
 const $numbers = document.querySelectorAll(".number");
-const $operator = document.querySelectorAll(".operator");
+const $operators = document.querySelectorAll(".operator");
+const $clear = document.querySelectorAll(".clear");
+const $equals = document.querySelectorAll(".equal-sign");
+
+
 
 // console.dir($numbers);
 
@@ -11,16 +15,26 @@ const $operator = document.querySelectorAll(".operator");
 
 $numbers.forEach(function(number) {
     number.addEventListener("click", function() {
-        console.log("ticked it.");
+        alert($numbers);
     });
-    // $numbers.addEventListener = ("click", function(){
-    //     alert("ticked it.");
-    // })
 });
 
-// $numbers.addEventListener = ("click", function(){
-//     alert("Ticked It");
-// });
 
-// array.values($numbers);
-// console.dir($numbers);
+$operators.forEach(function(operator) {
+    operator.addEventListener("click", function() {
+        alert($operators);
+    });
+});
+
+$clear.forEach(function(clear){
+    clear.addEventListener("click", function(){
+        alert("C");
+    });
+})
+
+$equals.forEach(function(equal){
+    equal.addEventListener("click", function(){
+        alert("=");
+    });
+});
+
