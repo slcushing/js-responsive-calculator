@@ -2,7 +2,7 @@ const $buttons = document.querySelectorAll("button");
 const $numbers = document.querySelectorAll(".number");
 const $operators = document.querySelectorAll(".operator");
 const $clear = document.querySelectorAll(".clear");
-const $equals = document.querySelectorAll(".equal-sign");
+const $equal = document.querySelectorAll(".equal-sign");
 
 
 
@@ -13,28 +13,28 @@ const $equals = document.querySelectorAll(".equal-sign");
 //     alert(message);
 //  };
 
-$numbers.forEach(function(number) {
-    number.addEventListener("click", function() {
-        alert($numbers);
+$numbers.forEach(number => {
+    number.addEventListener("click", function pushNumber(event){
+        alert(event.target.value);
     });
 });
 
 
-$operators.forEach(function(operator) {
-    operator.addEventListener("click", function() {
-        alert($operators);
+$operators.forEach(operator => {
+    operator.addEventListener("click", function pushOperator(event){
+        alert(event.target.value);
     });
 });
 
-$clear.forEach(function(clear){
-    clear.addEventListener("click", function(){
-        alert("C");
+$clear.forEach(clear => {
+    clear.addEventListener("click", function clear(event){
+        alert(event.target.value);
     });
 })
 
-$equals.forEach(function(equal){
-    equal.addEventListener("click", function(){
-        alert("=");
+$equal.forEach(equal => {
+    equal.addEventListener("click", function calculate(event){
+        alert(event.target.value);
     });
 });
 
