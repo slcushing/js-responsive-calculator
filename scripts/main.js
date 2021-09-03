@@ -4,18 +4,14 @@ const $operators = document.querySelectorAll(".operator");
 const $clear = document.querySelectorAll(".clear");
 const $equal = document.querySelectorAll(".equal-sign");
 
-
-
+var calculation = [];
+// console.log(calculation.length);
 // console.dir($numbers);
-
-//  function pushNumber() {
-//     let message = ($numbers);
-//     alert(message);
-//  };
 
 $numbers.forEach(number => {
     number.addEventListener("click", function pushNumber(event){
         alert(event.target.value);
+        calculation.push(event.target.value);
     });
 });
 
@@ -23,6 +19,7 @@ $numbers.forEach(number => {
 $operators.forEach(operator => {
     operator.addEventListener("click", function pushOperator(event){
         alert(event.target.value);
+        calculation.push(event.target.value);
     });
 });
 
@@ -37,4 +34,6 @@ $equal.forEach(equal => {
         alert(event.target.value);
     });
 });
+
+//if a number button is clicked, then the value of that number needs to be added to the array;
 
