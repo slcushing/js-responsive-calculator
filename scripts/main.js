@@ -10,7 +10,7 @@ var calculation = [];
 
 $numbers.forEach(number => {
     number.addEventListener("click", function pushNumber(event){
-        alert(event.target.value);
+        // alert(event.target.value);
         calculation.push(event.target.value);
     });
 });
@@ -18,22 +18,32 @@ $numbers.forEach(number => {
 
 $operators.forEach(operator => {
     operator.addEventListener("click", function pushOperator(event){
-        alert(event.target.value);
+        // alert(event.target.value);
         calculation.push(event.target.value);
     });
 });
 
-$clear.forEach(clear => {
-    clear.addEventListener("click", function clear(event){
-        alert(event.target.value);
-    });
-})
+// $clear.forEach(clear => {
+//     clear.addEventListener("click", function clear(event){
+//         alert(event.target.value);
+//     });
+// })
 
 $equal.forEach(equal => {
-    equal.addEventListener("click", function calculate(event){
-        alert(event.target.value);
+    equal.addEventListener("click", function equals(event){
+        // alert(event.target.value);
+        calculation.push(event.target.value);
     });
 });
 
-//if a number button is clicked, then the value of that number needs to be added to the array;
+function calculate () {
+    calculation.join('');
+    
+    };
+    
+//currently can get to something like ['90+10='] - have to figure out how to split up the string between numbers and operators then use switch to cycle through the mathematial functions
 
+
+//if button click is a number, then change from string to number and join if necessary
+//if button click is operator, then register it as its mathematical function
+//if button click is equals, then complete the mathematical solution and alert
