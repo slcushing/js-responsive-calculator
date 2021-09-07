@@ -5,7 +5,6 @@ const $clear = document.querySelectorAll(".clear");
 const $equal = document.querySelectorAll(".equal-sign");
 
 var calculation = [];
-
 // console.log(calculation.length);
 // console.dir($numbers);
 
@@ -36,32 +35,27 @@ $equal.forEach(equal => {
         calculation.push(event.target.value);
     });
 });
+let equation = calculation.join('');
+    console.log(equation);
 
-function calculate (equation) {
-    // let calculate = 0;
-    equation = calculation.join(''); 
-    for (let i=0; i < equation.length; i++){
-        if('+-*/='.includes(equation[i])) {
-            
-        }
-    }
-    switch (operator) [
-        case '+':
-            return (num1 + num2);
-            break;
-        case '-':
-            return (num1 - num2);
-            break;
-        case '*' 
-            return (num1 * num2);
-            break;
-        case '/':
-            return (num1 / num2);
-            break;
-        default:
-            return = 'Error';
-    ]
-    };
+    
+    // switch (operator) [
+    //     case '+':
+    //         return (num1 + num2);
+    //         break;
+    //     case '-':
+    //         return (num1 - num2);
+    //         break;
+    //     case '*' 
+    //         return (num1 * num2);
+    //         break;
+    //     case '/':
+    //         return (num1 / num2);
+    //         break;
+    //     default:
+    //         return = 'Error';
+    // ]
+    // };
     
 
 
