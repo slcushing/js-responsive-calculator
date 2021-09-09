@@ -4,13 +4,13 @@ const $operators = document.querySelectorAll(".operator");
 const $clear = document.querySelectorAll(".clear");
 const $equal = document.querySelectorAll(".equal-sign");
 
-var calculation = [];
+const calculation = [];
 // console.log(calculation.length);
 // console.dir($numbers);
 
 $numbers.forEach(number => {
     number.addEventListener("click", function pushNumber(event){
-        // alert(event.target.value);
+        console.log(event.target.value);
         calculation.push(event.target.value);
     });
 });
@@ -18,7 +18,7 @@ $numbers.forEach(number => {
 
 $operators.forEach(operator => {
     operator.addEventListener("click", function pushOperator(event){
-        // alert(event.target.value);
+        console.log(event.target.value);
         calculation.push(event.target.value);
     });
 });
@@ -30,13 +30,37 @@ $operators.forEach(operator => {
 // })
 
 $equal.forEach(equal => {
-    equal.addEventListener("click", function equals(event){
+    equal.addEventListener("click", function calculate(event){
         // alert(event.target.value);
-        calculation.push(event.target.value);
+        let num1 = '', num2 = '', operator = null, result;
+        const operators = ['*', '/', '+', '-']
+        for(let i = 0; i < calculation.length; i++) {
+            const char = calculation[i];
+            if(operators.includes(char)){
+                operator = char;
+            } else if(!operator) {
+                num1 += char;
+            } else {
+                num2 += char;
+            }
+        }
+    
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+    
+    if(operator === '+') {
+        result = num1 + num2;
+    } else if (operator === '-') {
+        result = num1 - num2;
+    } else if (operator === '*') {
+        result = num1 * num2;
+    } else if (operator === '/') {
+        result = num1 / num2;
+    };
+    
     });
 });
-let equation = calculation.join('');
-    console.log(equation);
+
 
     
     // switch (operator) [
