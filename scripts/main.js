@@ -9,7 +9,7 @@ const calculation = [];
 
 $numbers.forEach(number => {
     number.addEventListener("click", function pushNumber(event){
-        $display.value = event.target.value;
+        $display.value = event.target.value; //displays number clicked
         calculation.push(event.target.value);
     });
 });
@@ -17,7 +17,7 @@ $numbers.forEach(number => {
 
 $operators.forEach(operator => {
     operator.addEventListener("click", function pushOperator(event){
-        $display.value = event.target.value;
+        $display.value = event.target.value; //displays operator 
         calculation.push(event.target.value);
         
     });
