@@ -5,13 +5,11 @@ const $clear = document.querySelectorAll(".clear");
 const $equalSign = document.querySelectorAll(".equal-sign");
 const $display = document.querySelector(".calculator-screen");
 
-
-
 const calculation = [];
 
 $numbers.forEach(number => {
     number.addEventListener("click", function pushNumber(event){
-        console.log(event.target.value);
+        $display.value = event.target.value;
         calculation.push(event.target.value);
     });
 });
@@ -19,7 +17,7 @@ $numbers.forEach(number => {
 
 $operators.forEach(operator => {
     operator.addEventListener("click", function pushOperator(event){
-        console.log(event.target.value);
+        $display.value = event.target.value;
         calculation.push(event.target.value);
         
     });
